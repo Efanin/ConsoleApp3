@@ -8,6 +8,10 @@ namespace ConsoleApp3
 {
     internal class Enemy: Warrior
     {
+        private static int minLvl = 3;
+        private static int maxLvl = 8;
+        private static int minHp = 50;
+        private static int maxHp = 100;
         public Enemy():base(setName(), setLvl(), setHp())
         {
 
@@ -21,12 +25,12 @@ namespace ConsoleApp3
         private static int setLvl()
         {
             Random random = new Random();
-            return random.Next(5, 10);
+            return random.Next(minLvl, maxLvl);
         }
         private static int setHp()
         {
             Random random = new Random();
-            return random.Next(50, 150);
+            return random.Next(minHp, maxHp);
         }
     }
 }
