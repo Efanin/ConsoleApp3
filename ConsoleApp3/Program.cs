@@ -7,10 +7,10 @@ player.state();
 Hero rabbit = new Hero("rabbit", 1, 100);
 rabbit.state();
 
-player.takeItem(new Item("Sword", 2), new Item("Knife", 1), new Item("Knife", 2));
-player.inventory();
-player.dropItem("Knife");
-player.inventory();
+player.inventory.takeItem(new Item("Sword", 2), new Item("Knife", 1), new Item("Knife", 2));
+player.inventory.inventory();
+player.inventory.dropItem("Knife");
+player.inventory.inventory();
 
 Fight.Start(player, enemy);
 
