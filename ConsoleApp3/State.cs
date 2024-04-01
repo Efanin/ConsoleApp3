@@ -8,6 +8,7 @@ namespace ConsoleApp3
 {
     static class State 
     {
+
         public static void state(this IHero hero)
         {
             Console.WriteLine($"Name: {hero.Name}");
